@@ -26,7 +26,7 @@ class MailChecker implements Rule
      */
     public function message()
     {
-        return 'The email address does not exist.';
+        return __('The email address does not exist.');
     }
 
     /**
