@@ -23,7 +23,7 @@ use MailChecker\LaravelValidationRule\MailChecker;
 public function rules()
 {
     return [
-        'email' => [new MailChecker],
+        'email' => [new MailChecker(<YOUR_API_KEY>)],
     ];
 }
 ```
