@@ -3,3 +3,28 @@
 [![Total Downloads](https://img.shields.io/github/downloads/mailchecker-io/mailchecker-laravel-rule/total?style=flat-square)](https://packagist.org/packages/mailchecker-io/mailchecker-laravel-rule)
 
 An easy to use Laravel Rule that uses the MailChecker.io service
+
+---
+## Installation
+
+You can install the package via composer:
+
+```bash
+composer require mailchecker-io/mailchecker-laravel-rule
+```
+
+## Running the validation rule
+
+```php
+// in a `FormRequest`
+
+use MailChecker\LaravelValidationRule\MailChecker;
+
+public function rules()
+{
+    return [
+        'email' => [new MailChecker],
+    ];
+}
+```
+

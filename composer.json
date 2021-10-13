@@ -1,0 +1,51 @@
+{
+    "name": "mailchecker-io/mailchecker-laravel-rule",
+    "description": "An easy to use Laravel Rule that uses the MailChecker.io service",
+    "keywords": [
+        "mailchecker",
+        "email validation",
+        "validate email",
+        "laravel",
+        "laravel rule",
+        "api",
+        "sdk"
+    ],
+    "homepage": "https://github.com/mailchecker-io/mailchecker-laravel-rule",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danny Streur",
+            "email": "support@mailchecker.io",
+            "homepage": "https://mailchecker.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "^6.0|^7.0|^8.0",
+        "mailchecker-io/mailchecker-php-sdk": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "orchestra/testbench": "^4.5|^5.0|^6.0",
+        "vlucas/phpdotenv": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MailChecker\\LaravelValidationRule\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MailChecker\\LaravelValidationRule\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
