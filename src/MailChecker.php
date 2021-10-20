@@ -2,6 +2,7 @@
 
 namespace MailChecker\LaravelValidationRule;
 
+use Exception;
 use Illuminate\Contracts\Validation\Rule;
 use MailChecker\PhpSdk\MailChecker as MailCheckerSdk;
 
@@ -39,8 +40,12 @@ class MailChecker implements Rule
      */
     public function passes($attribute, $value)
     {
-        $email = $this->mailChecker->validateEmail($value);
+        try {
+            $email = $this->mailChecker->validateEmail($value);
 
-        return $email->isDeliverable();
+            return $email->isDeliverable();
+        } catch (Exception $exception) {
+            return true;
+        }
     }
 }
