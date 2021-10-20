@@ -7,7 +7,7 @@ use MailChecker\PhpSdk\MailChecker as MailCheckerSdk;
 
 class MailChecker implements Rule
 {
-    private $mailChecker;
+    protected MailCheckerSdk $mailChecker;
 
     /**
      * Create a new rule instance.
